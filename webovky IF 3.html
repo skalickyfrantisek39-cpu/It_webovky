@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>František Skalický – Osobní profil</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f6fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #0066cc;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
+
+        header h1 {
+            margin: 0.5rem 0 0.2rem;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .accordion {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: #0077cc;
+            color: white;
+            transition: background 0.3s;
+        }
+
+        .accordion-header:hover {
+            background-color: #005fa3;
+        }
+
+        .accordion-content {
+            padding: 1rem 1.5rem;
+            display: none;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+
+        .about-list {
+            list-style-type: "✔ ";
+            padding-left: 1rem;
+        }
+
+        .about-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .interests-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .interests-container img {
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .interests-container ul {
+            flex: 1;
+            margin: 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        a {
+            color: #0077cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="profilovka.jpg" alt="Profilová fotka">
+        <h1>František Skalický</h1>
+        <p>Student Gymnázia Kladno</p>
+    </header>
+
+    <main>
+        <section class="accordion">
+            <div class="accordion-header">O mně</div>
+            <div class="accordion-content">
+                <ul class="about-list">
+                    <li>Je mi 16 let</li>
+                    <li>Studuji na gymnáziu Kladno</li>
+                    <li>Mám rád chemii a biologii</li>
+                    <li>Hrál jsem 7 let florbal, dělal atletiku a in-line brusle</li>
+                    <li>Dělám autoškolu na auto i traktor</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="accordion">
+            <div class="accordion-header">Úspěchy</div>
+            <div class="accordion-content">
+                <ul>
+                    <li>🥈 2. místo – Okresní olympiáda z němčiny</li>
+                    <li>🥈 2. místo – Florbal, mezinárodní turnaj Gothia Cup 2023</li>
+                    <li>🥉 3. místo – Florbal, PFC 2023</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="accordion">
+            <div class="accordion-header">Zájmy</div>
+            <div class="accordion-content">
+                <div class="interests-container">
+                    <ul>
+                        <li>📚 <strong>Čtení</strong> – mám rád westerny a dobrodružné knihy</li>
+                        <li>🏒 <strong>Sport</strong> – sleduji hokej a rád hraju všechny sporty, hlavně týmové</li>
+                        <li>🎶 <strong>Hudba</strong> – poslouchám různé žánry, ale nejvíce kapelu Pink Floyd</li>
+                        <li>🥾 <strong>Turistika</strong> – rád chodím po horách</li>
+                    </ul>
+                    <img src="zajmy.jpg" alt="Hory">
+                </div>
+            </div>
+        </section>
+
+        <section class="accordion">
+            <div class="accordion-header">Dovednosti</div>
+            <div class="accordion-content">
+                <ul>
+                    <li>🗣️ Ovládám češtinu, angličtinu a němčinu</li>
+                    <li>🤝 Rád pomáhám lidem, pokud vidím, že to má smysl</li>
+                    <li>💪 Sportovně všestranný, do všeho jdu po hlavě a se zápalem</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="accordion">
+            <div class="accordion-header">Kontakt</div>
+            <div class="accordion-content">
+                <p>📧 E-mail: <a href="mailto:frantisekskalicky08@seznam.cz">frantisekskalicky08@seznam.cz</a></p>
+                <p>📞 Telefon: +420 703 725 742</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 František Skalický</p>
+    </footer>
+
+    <script>
+        // Klikací rozbalovací sekce
+        const headers = document.querySelectorAll('.accordion-header');
+        headers.forEach(header => {
+            header.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
