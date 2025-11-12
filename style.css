@@ -1,0 +1,93 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f6fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #0066cc;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.topnav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #0077cc;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.topnav a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  display: block;
+  transition: background 0.3s;
+}
+
+.topnav a:hover {
+  background-color: #005fa3;
+}
+
+.topnav a.active {
+  background-color: #004b80;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.about-list {
+  list-style-type: "✔ ";
+  padding-left: 1rem;
+}
+
+.team-sparta { color: #8B0000; font-weight: bold; }
+.team-oilers { color: #FF8C00; font-weight: bold; }
+.team-chelsea { color: #003399; font-weight: bold; }
+
+.interests-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.interests-container img {
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.menu {
+  text-align: center;
+}
+
+.menu h2 {
+  margin-bottom: 1rem;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
